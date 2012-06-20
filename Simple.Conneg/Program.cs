@@ -19,7 +19,8 @@ namespace Simple.Conneg
                 new { id = RouteParameter.Optional }
                 );
 
-            config.Formatters.Add(new ImageFromTextFormatter() );
+            config.Formatters.Add(new ImageFromTextFormatter());
+            config.Formatters.Add(new WaveFromTextFormatter());
 
             var server = new HttpSelfHostServer(config);
             server.OpenAsync().Wait();

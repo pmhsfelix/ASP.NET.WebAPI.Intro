@@ -46,7 +46,8 @@ namespace Common
                     ms.Seek(0, SeekOrigin.Begin);
                     ms.CopyTo(stream);
                 }
-                stream.Close();
+                stream.Flush();
+                //stream.Close();
             });
         }
     }
